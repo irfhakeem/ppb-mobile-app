@@ -1,6 +1,9 @@
+import 'package:Medlink/components/myBottom_nav.dart';
+import 'package:Medlink/views/fasility_screen.dart';
+import 'package:Medlink/views/history_screen.dart';
+import 'package:Medlink/views/home_screen.dart';
+import 'package:Medlink/views/profile_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/home.dart';
-import 'package:flutter_application_1/walletScreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +17,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueAccent),
+        scaffoldBackgroundColor: Color.from(
+          alpha: 1.0,
+          red: 0.9568627450980393,
+          green: 0.9529411764705882,
+          blue: 0.9882352941176471,
+        ),
         useMaterial3: true,
       ),
       home: const MyHomePage(),
@@ -35,7 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
   // Daftar halaman untuk setiap tab
   final List<Widget> _pages = [
     HomeScreen(),
-    TradeScreen(),
+    FasilityScreen(),
     HistoryScreen(),
     ProfileScreen(),
   ];
@@ -49,107 +57,11 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 13, 13, 13),
-        toolbarHeight: 100,
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            ElevatedButton(
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Color.fromARGB(255, 13, 13, 13),
-                foregroundColor: Colors.white,
-                shadowColor: Colors.transparent,
-                shape: CircleBorder(
-                  side: BorderSide(color: Colors.white, width: 2),
-                ),
-                padding: const EdgeInsets.all(8),
-                minimumSize: const Size(16, 16),
-              ),
-              child: Icon(Icons.question_mark, color: Colors.white),
-            ),
-            ElevatedButton(
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Color.fromARGB(255, 13, 13, 13),
-                foregroundColor: Colors.white,
-                shadowColor: Colors.transparent,
-                padding: const EdgeInsets.all(8),
-                minimumSize: const Size(16, 16),
-              ),
-              child: Stack(
-                children: [
-                  Icon(Icons.notifications_none, size: 34, color: Colors.white),
-                  if (true)
-                    Positioned(
-                      top: 5,
-                      right: 4,
-                      child: Container(
-                        width: 10,
-                        height: 10,
-                        decoration: BoxDecoration(
-                          color: Colors.red,
-                          shape: BoxShape.circle,
-                        ),
-                      ),
-                    ),
-                ],
-              ),
-            ),
-          ],
-        ),
-        automaticallyImplyLeading: false,
-      ),
       body: _pages[_selectedIndex],
-      bottomNavigationBar: Container(
-        margin: EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-        child: ClipRRect(
-          borderRadius: BorderRadius.circular(25),
-          child: BottomNavigationBar(
-            items: const [
-              BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.balance),
-                label: 'Trade',
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.history),
-                label: 'History',
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.person),
-                label: 'Profile',
-              ),
-            ],
-            type: BottomNavigationBarType.fixed,
-            currentIndex: _selectedIndex,
-            backgroundColor: Colors.grey[800],
-            selectedItemColor: Colors.purple[200],
-            unselectedItemColor: Colors.white70,
-            showUnselectedLabels: true,
-            onTap: _onItemTapped,
-          ),
-        ),
+      bottomNavigationBar: SizedBox(
+        height: 75.0,
+        child: BottomNavBar(currentIndex: _selectedIndex, onTap: _onItemTapped),
       ),
     );
-  }
-}
-
-class HistoryScreen extends StatelessWidget {
-  const HistoryScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(child: Text("History Page", style: TextStyle(fontSize: 24)));
-  }
-}
-
-class ProfileScreen extends StatelessWidget {
-  const ProfileScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(child: Text("Profile Page", style: TextStyle(fontSize: 24)));
   }
 }
