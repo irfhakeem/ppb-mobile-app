@@ -1,4 +1,5 @@
 import 'package:Medlink/components/myBottom_nav.dart';
+import 'package:Medlink/views/appointment_screen.dart';
 import 'package:Medlink/views/fasility_screen.dart';
 import 'package:Medlink/views/history_screen.dart';
 import 'package:Medlink/views/home_screen.dart';
@@ -44,6 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
   final List<Widget> _pages = [
     HomeScreen(),
     FasilityScreen(),
+    AppointmentScreen(),
     HistoryScreen(),
     ProfileScreen(),
   ];

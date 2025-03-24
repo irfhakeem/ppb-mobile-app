@@ -16,6 +16,7 @@ class BottomNavBar extends StatelessWidget {
     final List<Map<String, dynamic>> navItems = [
       {'icon': Icons.home, 'label': 'Home'},
       {'icon': Icons.location_on, 'label': 'Facility'},
+      {'icon': Icons.handshake, 'label': 'Appointment'},
       {'icon': Icons.history, 'label': 'History'},
       {'icon': Icons.person, 'label': 'Profile'},
     ];
