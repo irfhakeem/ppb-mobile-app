@@ -1,16 +1,12 @@
-# flutter_application_1
+# Assignment 1
 
-A new Flutter project.
+Berikut adalah branch untuk pekerjaan assigment 1 dengan deskripsi tugas sebagai berikut:
+- uses at least 5 widgets different
+- custom class & custom stateless widget
+- Apply create, read, update, delete
 
-## Getting Started
+## Implementasi
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. Point 1 sudah diterapkan untuk menggunakan 5 widget berbeda seperti (Expanded, Row, Column, Sizebox, Text, Container, dll) pada component-component **Appointment** atau di **Appointment Screen**.
+2. Point 2 diterapkan dengan membuat custom class helper untuk membantu format tanggal dan waktu serta membuat stateless widget berupa **MyAppbar**, **MyBottomnav**, **MySearchbar**, dll sebagai component.
+3. Point 3 diterapkan pada **Appointment Screen** untuk CRUD data Appointment.
