@@ -1,3 +1,4 @@
+import 'package:Medlink/components/myAppbar.dart';
 import 'package:flutter/material.dart';
 
 class HistoryScreen extends StatelessWidget {
@@ -6,7 +7,10 @@ class HistoryScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Historis')),
+      appBar: PreferredSize(
+        preferredSize: const Size.fromHeight(75.0),
+        child: MyAppBar(title: 'Histories', isFirstPage: true),
+      ),
       body: const Center(
         child: Text('Riwayat Kesehatan, Detail Hasil, Obat, Biaya'),
       ),

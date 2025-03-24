@@ -1,4 +1,5 @@
 import 'package:Medlink/components/myAppbar.dart';
+import 'package:Medlink/components/myAppointmentCard.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -9,9 +10,12 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(75.0),
-        child: Myappbar(title: 'Home', isFirstPage: true),
+        child: MyAppBar(title: 'Home', isFirstPage: true),
       ),
-      body: const Center(child: Text('Home Screen')),
+      body: Padding(
+        padding: EdgeInsets.all(15),
+        child: Column(children: [Container(), Container()]),
+      ),
     );
   }
 }

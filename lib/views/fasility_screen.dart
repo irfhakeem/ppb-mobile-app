@@ -1,3 +1,4 @@
+import 'package:Medlink/components/myAppbar.dart';
 import 'package:flutter/material.dart';
 
 class FasilityScreen extends StatelessWidget {
@@ -6,7 +7,10 @@ class FasilityScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Facility')),
+      appBar: PreferredSize(
+        preferredSize: const Size.fromHeight(75.0),
+        child: MyAppBar(title: 'Facilities', isFirstPage: true),
+      ),
       body: const Center(child: Text('Pilih Fasilitas, Booking Fasilitas')),
     );
   }
