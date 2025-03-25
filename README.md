@@ -1,4 +1,4 @@
-# Assignment 1
+# Assignment 1 - Muhammad Irfan Hakim (5025221291)
 
 Berikut adalah branch untuk pekerjaan assigment 1 dengan deskripsi tugas sebagai berikut:
 - uses at least 5 widgets different
